@@ -1,0 +1,52 @@
+/* Excuse the slightly screwy formatting; this
+   .css file was compiled from a .scss file. */
+
+* {
+    /* Because this is arguably more intuitive. */
+    box-sizing: border-box;
+}
+
+
+body {
+    /* Defaulting to Mobile CSS.
+       This also sets the overall container for
+       the page to use CSS Grid. */
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    div {
+        background-color: orange;
+    }
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-color: rgb(165, 44, 44);
+}
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.two { 
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+.three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+.four {
+    grid-column: 3;
+    grid-row: 3;
+}
+.five {
+    grid-column: 2;
+    grid-row: 4;
+}
+.six {
+    grid-column: 3;
+    grid-row: 4;
+  }
