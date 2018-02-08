@@ -30,6 +30,8 @@ body {
     color: $text;
     font-family: 'Barlow Condensed', sans-serif;
     line-height: 1.5;
+    align-content: center;
+    justify-content: center;
 }
 
 img {
@@ -63,6 +65,7 @@ header {
 }
 
 section {
+    position: relative;
     grid-column: 2;
     grid-row: 1 / 3;
     margin: 15% 0;
@@ -109,22 +112,22 @@ section {
         grid-template-rows: 5% 90% 5%;
     }
     img {
+        padding: 0;
+        margin: 0;
         max-width: 80%;
         margin: auto;
     }
     #phone {
-        padding: 0;
+        margin: auto;
         grid-column: 1;
         grid-row: 2;
     }
     #keys {
-        padding: 0;
         grid-column: 2;
         grid-row: 2;
     }
     #wallet {
         margin: auto;
-        padding: 0;
         grid-column: 3;
         grid-row: 2;
     }
