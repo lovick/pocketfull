@@ -1,38 +1,44 @@
 "use strict";
 
+// Some initial selections. Could clean up.
 var body = document.querySelector("body");
-
 var phone = document.querySelector("#phone");
 var keys = document.querySelector("#keys");
 var wallet = document.querySelector("#wallet");
 var help = document.querySelector("#help");
 var close = document.querySelector("#close");
 
+// Phone event listeners for mobile and mouse.
 phone.addEventListener('touchstart', phoneMenu);
 phone.addEventListener('mousedown', phoneMenu);
 phone.addEventListener('mouseover', hover);
 phone.addEventListener('mouseout', unhover);
 
+// Keys event listeners for mobile and mouse.
 keys.addEventListener('touchstart', keysMenu);
 keys.addEventListener('mousedown', keysMenu);
 keys.addEventListener('mouseover', hover);
 keys.addEventListener('mouseout', unhover);
 
+// Wallet event listeners for mobile and mouse.
 wallet.addEventListener('touchstart', walletMenu);
 wallet.addEventListener('mousedown', walletMenu);
 wallet.addEventListener('mouseover', hover);
 wallet.addEventListener('mouseout', unhover);
 
+// Help and close event listeners for mobile and mouse.
 help.addEventListener('touchstart', helpMenu);
 help.addEventListener('mousedown', helpMenu);
 close.addEventListener('touchdown', closeMenu);
 close.addEventListener('mousedown', closeMenu);
 
-document.querySelector('html').addEventListener('touchmove', function(e) {
+// This was an attempt at disallowing scrolling on mobile; no luck.
+/*document.querySelector('html').addEventListener('touchmove', function(e) {
     e.preventDefault();
-}, false);
+}, false);*/
 
 function phoneMenu() {
+    // This will add the phone popup to the screen, if it's not already open.
     var sec = document.querySelector('section');
     if (sec != null) {
         console.log("Can't append, it exists");
@@ -58,6 +64,7 @@ function phoneMenu() {
 }
 
 function keysMenu() {
+    // Checks if there's already an open section, and opens the keys menu if not.
     var sec = document.querySelector('section');
     if (sec != null) {
         console.log("Can't append, it exists");
@@ -83,6 +90,7 @@ function keysMenu() {
 }
 
 function walletMenu() {
+    // Looks for an open section; opens wallet if not.
     var sec = document.querySelector('section');
     if (sec != null) {
         console.log("Can't append, it exists");
@@ -108,6 +116,7 @@ function walletMenu() {
 }
 
 function helpMenu() {
+    // Checks for an open section, opens help if not.
     var sec = document.querySelector('section');
     if (sec != null) {
         console.log("Can't append, it exists");
@@ -132,16 +141,18 @@ function helpMenu() {
 }
 
 function closeMenu() {
+    // If there's an open section, it closes it.
     var sec = document.querySelector('section');
     if (sec == null) {
         console.log("Can't close something that doesn't exist.");
     } else {
-        console.log("attempt remvove");
+        console.log("attempt remove");
         sec.remove();
     }
  }
 
  function hover(obj) {
+     // Switches the images to the hover versions on hover.
      switch(obj.target.id) {
          case 'phone':
             phone.setAttribute('src', 'images/phone500C.png');
@@ -158,6 +169,7 @@ function closeMenu() {
  }
 
  function unhover(obj) {
+     // Switches the images to default on mouseexit.
      switch(obj.target.id) {
         case 'phone':
             phone.setAttribute('src', 'images/phone500.png');
