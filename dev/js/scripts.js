@@ -149,12 +149,12 @@ function closeMenu() {
         console.log("attempt remove");
         sec.remove();
     }
- }
+}
 
- function hover(obj) {
-     // Switches the images to the hover versions on hover.
-     switch(obj.target.id) {
-         case 'phone':
+function hover(obj) {
+    // Switches the images to the hover versions on hover.
+    switch (obj.target.id) {
+        case 'phone':
             phone.setAttribute('src', 'images/phone500C.png');
             break;
         case 'keys':
@@ -165,12 +165,12 @@ function closeMenu() {
             break;
         default:
             console.log("no change?");
-     }
- }
+    }
+}
 
- function unhover(obj) {
-     // Switches the images to default on mouseexit.
-     switch(obj.target.id) {
+function unhover(obj) {
+    // Switches the images to default on mouseexit.
+    switch (obj.target.id) {
         case 'phone':
             phone.setAttribute('src', 'images/phone500.png');
             break;
@@ -183,5 +183,5 @@ function closeMenu() {
         default:
             console.log("no change to unhover");
 
-     }
- }
+    }
+}
