@@ -115,13 +115,15 @@ function helpMenu() {
         var menu = document.createElement('section');
         menu.style.gridRow = 1 / 3;
         menu.innerHTML = `
-            <h2>Info</h2>
+            <h2>Pocket Full of Interface</h2>
             <a href="#" id="close" onclick="closeMenu()">CLOSE</a>
             <p>
                 This is a small visualization of what I carry in my pockets daily, the things I can't live without. Click or tap on each item to learn a bit more about it.
             </p>
+            <footer>
             <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
             <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+            </footer>
         `;
         menu.style.border = "2px solid #333333";
         menu.style.transition = "width 2s, height 4s";

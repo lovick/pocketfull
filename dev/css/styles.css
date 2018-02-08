@@ -32,7 +32,8 @@ img {
   margin: auto;
   padding: 5px;
   grid-column: 2;
-  max-height: 100%; }
+  max-height: 100%;
+  max-width: 100%; }
 
 #phone {
   grid-row: 1;
@@ -45,6 +46,12 @@ img {
   margin: auto;
   grid-row: 3;
   padding-bottom: 20px; }
+
+header {
+  display: none; }
+  header h1 {
+    margin: 0;
+    padding-left: 10px; }
 
 section {
   grid-column: 2;
@@ -78,6 +85,8 @@ section {
   border: 2px solid #333333; }
 
 @media only screen and (min-width: 768px) {
+  header {
+    display: block; }
   body {
     max-width: 100%;
     grid-template-columns: 33% 33% 33%;
