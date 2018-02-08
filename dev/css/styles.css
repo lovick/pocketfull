@@ -27,17 +27,24 @@ nav {
 
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   height: 100%;
   width: 100%; }
   ul li {
+    display: inline-block;
+    position: relative;
     height: 33.3%; }
     ul li img {
+      position: absolute;
+      top: 50%;
       display: block;
       margin: auto;
-      padding: 70px;
-      width: 80%; }
+      margin-top: 10%;
+      margin-bottom: 10%;
+      padding: auto;
+      width: 80%;
+      height: 100%; }
 
 section {
   grid-column: 2 / 4;
